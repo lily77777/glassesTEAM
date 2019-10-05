@@ -1,0 +1,144 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace sun作业
+
+{
+    class Program
+    {
+        struct swe
+        {
+            public int xuhao;
+            public string xuehao;
+            public string xingming;
+            public double korean;
+            public double english;
+            public double math;
+            public double chengji;
+            
+        }
+        static void Main(string[] args)
+        {
+            ArrayList al = new ArrayList();
+            Console.WriteLine("학생수량을 입력하세요：");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                swe s = new swe();
+                s.xuhao = i;
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 학번을 입력하세요：", i);
+                    s.xuehao = Console.ReadLine();
+                    if (s.xuehao == "")
+                    {
+                        Console.WriteLine("학번 입력이 잘못되었습니다!");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 이름을 입력하세요;：", i);
+                    s.xingming = Console.ReadLine();
+                    if (s.xingming == "")
+                    {
+                        Console.WriteLine("이름은 비워 둘 수 없습니다!");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 국어 성적을 입력하세요:", i);
+                    try
+                    {
+                        s.korean = int.Parse(Console.ReadLine());
+                        if (s.korean >= 0 && s.korean <= 150)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("0~150의 사이하면 됩니다！");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine(" 성적 입력이 잘못되었습니다！");
+                    }
+                }
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 영어 성적을 입력하세요:", i);
+                    try
+                    {
+                        s.english = int.Parse(Console.ReadLine());
+                        if (s.english >= 0 && s.english <= 150)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("0~150의 사이하면 됩니다！");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("성적 입력이 잘못되었습니다！");
+                    }
+                }
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 수학 성적을 입력하세요:", i);
+                    try
+                    {
+                        s.math = int.Parse(Console.ReadLine());
+                        if (s.math >= 0 && s.math <= 150)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("0~150의 사이하면 됩니다！");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("성적 입력이 잘못되었습니다！");
+                    }
+                }
+                while (true)
+                {
+                    Console.WriteLine("{0}번쪠 학생의 C#성적을 입력하세요:", i);
+                    try
+                    {
+                        s.chengji = int.Parse(Console.ReadLine());
+                        if (s.chengji >= 0 && s.chengji <= 150)
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("0~150의 사이하면 됩니다！");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("성적 입력이 잘못되었습니다！");
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
